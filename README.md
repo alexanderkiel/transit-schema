@@ -36,7 +36,7 @@ Add read and write handlers to your Transit readers and writers.
 | Semantic Type | Tag | Rep Tag | Rep    | String Rep | MessagePack | JSON     | JSON-Verbose |
 |---------------|-----|---------|--------|------------|-------------|----------|--------------|
 | leaf schema   | S   | s       | "leaf" |            | "~Sleaf"    | "~Sleaf" | "~Sleaf"     |
-| record schema | record name | map | map suitable to create the record | ["~#record name", {"~:prop-a": "val-a"}] | ["~#record name", {"~:prop-a": "val-a"}] | {"~#record name": {"~:prop-a": "val-a"}} |
+| record schema | record name | map | map suitable to create the record | | ["~#record name", {"~:prop-a": "val-a"}] | ["~#record name", {"~:prop-a": "val-a"}] | {"~#record name": {"~:prop-a": "val-a"}} |
 
 The following leaf schemas are supported:
 
