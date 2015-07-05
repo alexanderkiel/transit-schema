@@ -66,6 +66,11 @@ The following record schemas are supported:
 * schema.core.One
 * schema.core.FnSchema
 * schema.core.Isa
+                
+## Similar Libs
+                                  
+* [schema-transit][3] from outpace does the same but uses more verbose encoding
+  of leaf schemas and doesn't use reader conditionals for more compact code.
                                   
 ## License
 
@@ -75,3 +80,4 @@ Distributed under the Eclipse Public License, the same as Clojure.
 
 [1]: <https://github.com/cognitect/transit-format>
 [2]: <https://github.com/Prismatic/schema>
+[3]: <https://github.com/outpace/schema-transit>
