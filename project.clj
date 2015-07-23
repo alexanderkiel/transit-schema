@@ -1,5 +1,5 @@
 (defproject org.clojars.akiel/transit-schema "0.1-SNAPSHOT"
-  :description "FIXME: write description"
+  :description "Semantic types for Transit to convey Schemas."
   :url "https://github.com/alexanderkiel/hap-todo"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
