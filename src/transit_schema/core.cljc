@@ -3,7 +3,7 @@
   (:require [cognitect.transit :as t]
             [schema.core :as s])
   #?(:clj
-     (:import [schema.core Predicate])))
+     (:import [schema.core Predicate AnythingSchema])))
 
 (def ^:private records
   #?(:clj
@@ -55,17 +55,21 @@
   (assoc record-read-handlers
     "S" (t/read-handler read-leaf-schema)))
 
-(defn- write-leaf-schema [x]
+(defn- write-type-leaf-schema [x]
   #?(:clj
      (condp = x
-       String "Str"
-       (condp = (:p? x)
-         integer? "Int"
-         string? "Str"))))
+       String "Str")))
+
+(defn- write-pred-leaf-schema [x]
+  #?(:clj
+     (condp = (:p? x)
+       integer? "Int"
+       string? "Str")))
 
 (def write-handlers
   #?(:clj
      (assoc (apply t/record-write-handlers records)
-       Class (t/write-handler "S" write-leaf-schema)
-       Predicate (t/write-handler "S" write-leaf-schema)))
+       Class (t/write-handler "S" write-type-leaf-schema)
+       Predicate (t/write-handler "S" write-pred-leaf-schema)
+       AnythingSchema (t/write-handler "S" (constantly "Any"))))
   #?(:cljs {}))

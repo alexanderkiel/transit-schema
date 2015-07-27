@@ -4,7 +4,7 @@
             [schema.core :as s]))
 
 (deftest read-leaf-schema-test
-  (are [x schema] (= schema (#'ts/read-leaf-schema x))
+  (are [rep schema] (= schema (#'ts/read-leaf-schema rep))
     "Any" s/Any
     "Bool" s/Bool
     "Keyword" s/Keyword
@@ -15,3 +15,11 @@
     "Str" s/Str
     "Symbol" s/Symbol
     "Uuid" s/Uuid))
+
+(deftest write-type-leaf-schema-test
+  (are [x rep] (= rep (#'ts/write-type-leaf-schema x))
+    s/Str "Str"))
+
+(deftest write-type-pred-schema-test
+  (are [x rep] (= rep (#'ts/write-pred-leaf-schema x))
+    s/Int "Int"))
