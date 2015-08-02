@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "0.0-3211"]
+                 [org.clojure/clojurescript "1.7.28"]
                  [com.cognitect/transit-clj "0.8.275"
                   :exclusions
                   [com.fasterxml.jackson.datatype/jackson-datatype-json-org
