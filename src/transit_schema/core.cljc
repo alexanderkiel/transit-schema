@@ -64,7 +64,9 @@
   #?(:clj
      (condp = (:p? x)
        integer? "Int"
-       string? "Str")))
+       string? "Str"
+       keyword? "Keyword"
+       symbol? "Symbol")))
 
 (def write-handlers
   #?(:clj
