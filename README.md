@@ -12,7 +12,7 @@ ClojureScript.
 To install, just add the following to your project dependencies:
 
 ```clojure
-[org.clojars.akiel/transit-schema "0.1"]
+[org.clojars.akiel/transit-schema "0.2"]
 ```
 
 ## Usage
