@@ -18,8 +18,15 @@
 
 (deftest write-type-leaf-schema-test
   (are [x rep] (= rep (#'ts/write-type-leaf-schema x))
-    s/Str "Str"))
+    s/Bool "Bool"
+    s/Inst "Inst"
+    s/Num "Num"
+    s/Regex "Regex"
+    s/Str "Str"
+    s/Uuid "Uuid"))
 
 (deftest write-pred-leaf-schema-test
   (are [x rep] (= rep (#'ts/write-pred-leaf-schema x))
-    s/Int "Int"))
+    s/Keyword "Keyword"
+    s/Int "Int"
+    s/Symbol "Symbol"))

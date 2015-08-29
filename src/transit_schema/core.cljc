@@ -3,7 +3,9 @@
   (:require [cognitect.transit :as t]
             [schema.core :as s])
   #?(:clj
-     (:import [schema.core Predicate AnythingSchema])))
+     (:import [schema.core Predicate AnythingSchema]
+              [java.util UUID Date]
+              [java.util.regex Pattern])))
 
 (def ^:private records
   #?(:clj
@@ -58,7 +60,12 @@
 (defn- write-type-leaf-schema [x]
   #?(:clj
      (condp = x
-       String "Str")))
+       Boolean "Bool"
+       Date "Inst"
+       Number "Num"
+       Pattern "Regex"
+       String "Str"
+       UUID "Uuid")))
 
 (defn- write-pred-leaf-schema [x]
   #?(:clj
