@@ -20,6 +20,6 @@
   (are [x rep] (= rep (#'ts/write-type-leaf-schema x))
     s/Str "Str"))
 
-(deftest write-type-pred-schema-test
+(deftest write-pred-leaf-schema-test
   (are [x rep] (= rep (#'ts/write-pred-leaf-schema x))
     s/Int "Int"))
