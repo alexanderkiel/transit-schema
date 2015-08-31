@@ -65,7 +65,8 @@
        Number "Num"
        Pattern "Regex"
        String "Str"
-       UUID "Uuid")))
+       UUID "Uuid"
+       nil)))
 
 (defn- write-pred-leaf-schema [x]
   #?(:clj
@@ -78,7 +79,7 @@
 (def write-handlers
   #?(:clj
      (assoc (apply t/record-write-handlers records)
-       Class (t/write-handler "S" write-type-leaf-schema)
+       Class (t/write-handler #(when (write-type-leaf-schema %) "S") write-type-leaf-schema)
        Predicate (t/write-handler "S" write-pred-leaf-schema)
        AnythingSchema (t/write-handler "S" (constantly "Any"))))
   #?(:cljs {}))

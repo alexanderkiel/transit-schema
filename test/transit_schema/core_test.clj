@@ -23,7 +23,8 @@
     s/Num "Num"
     s/Regex "Regex"
     s/Str "Str"
-    s/Uuid "Uuid"))
+    s/Uuid "Uuid"
+    Byte nil))
 
 (deftest write-pred-leaf-schema-test
   (are [x rep] (= rep (#'ts/write-pred-leaf-schema x))
