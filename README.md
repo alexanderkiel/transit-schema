@@ -12,7 +12,7 @@ ClojureScript.
 To install, just add the following to your project dependencies:
 
 ```clojure
-[org.clojars.akiel/transit-schema "0.2"]
+[org.clojars.akiel/transit-schema "0.3"]
 ```
 
 ## Usage
@@ -40,16 +40,16 @@ Add read and write handlers to your Transit readers and writers.
 
 The following leaf schemas are supported:
 
-* Any 
-* Bool 
+* Any
+* Bool
 * Keyword
-* Inst 
+* Inst
 * Int
 * Num
 * Regex
 * Str
 * Symbol
-* Uuid 
+* Uuid
 
 The following record schemas are supported:
 
@@ -66,12 +66,12 @@ The following record schemas are supported:
 * schema.core.One
 * schema.core.FnSchema
 * schema.core.Isa
-                
+
 ## Similar Libs
-                                  
+
 * [schema-transit][3] from outpace does the same but uses more verbose encoding
   of leaf schemas and doesn't use reader conditionals for more compact code.
-                                  
+
 ## License
 
 Copyright © 2015 Alexander Kiel
