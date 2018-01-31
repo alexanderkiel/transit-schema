@@ -3,6 +3,7 @@ __This software is ALPHA.__
 # Transit Schema
 
 [![Build Status](https://travis-ci.org/alexanderkiel/transit-schema.svg?branch=master)](https://travis-ci.org/alexanderkiel/transit-schema)
+[![Dependencies Status](https://versions.deps.co/alexanderkiel/transit-schema/status.svg)](https://versions.deps.co/alexanderkiel/transit-schema)
 
 Semantic types for [Transit][1] to convey [Schemas][2]. Works in Clojure and
 ClojureScript.
@@ -12,7 +13,7 @@ ClojureScript.
 To install, just add the following to your project dependencies:
 
 ```clojure
-[org.clojars.akiel/transit-schema "0.4"]
+[org.clojars.akiel/transit-schema "0.5"]
 ```
 
 ## Usage

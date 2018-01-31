@@ -1,4 +1,4 @@
-(defproject org.clojars.akiel/transit-schema "0.5-SNAPSHOT"
+(defproject org.clojars.akiel/transit-schema "0.5"
   :description "Semantic types for Transit to convey Schemas."
   :url "https://github.com/alexanderkiel/transit-schema"
   :license {:name "Eclipse Public License"
