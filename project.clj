@@ -1,14 +1,17 @@
 (defproject org.clojars.akiel/transit-schema "0.5-SNAPSHOT"
   :description "Semantic types for Transit to convey Schemas."
-  :url "https://github.com/alexanderkiel/hap-todo"
+  :url "https://github.com/alexanderkiel/transit-schema"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "1.7.228"]
-                 [com.cognitect/transit-clj "0.8.285"
-                  :exclusions
-                  [com.fasterxml.jackson.datatype/jackson-datatype-json-org
-                   com.googlecode.json-simple/json-simple]]
-                 [com.cognitect/transit-cljs "0.8.237"]
-                 [prismatic/schema "1.0.4"]])
+  :min-lein-version "2.5.2"
+  :pedantic? :abort
+
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [com.cognitect/transit-clj "0.8.300"]
+                 [com.cognitect/transit-cljs "0.8.243"]
+                 [prismatic/schema "1.1.7"]]
+
+  :profiles
+  {:dev
+   {:dependencies [[org.clojure/clojurescript "1.9.946"]]}})
